@@ -19,14 +19,11 @@ public class Article implements Serializable {
         this.prix = prix;
     }
 
-    public Article(String ref) {
+    public Article(String s, String ref, Double prix, int fournisseu) {
         this.ref = ref;
     }
 
-    public Article(String ref, String designation) {
-        this.ref = ref;
-        this.designation = designation;
-    }
+
 
     public Article(int id, String ref, String designation, double prix, Fournisseu fournisseur) {
         this.id = id;
@@ -36,13 +33,14 @@ public class Article implements Serializable {
         this.fournisseur = fournisseur;
     }
 
-    public Article(double prix) {
+    public Article(String ref, String designation, double prix, Fournisseu fournisseur) {
+        this.ref = ref;
+        this.designation = designation;
         this.prix = prix;
-    }
-
-    public Article(Fournisseu fournisseur) {
         this.fournisseur = fournisseur;
     }
+
+
 
 
 

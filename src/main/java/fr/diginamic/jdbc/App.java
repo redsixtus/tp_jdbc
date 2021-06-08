@@ -11,14 +11,19 @@ import java.sql.SQLException;
 public class App {
     public static void main(String[] args)  {
 
+        ajoutArticle("RFT","Peinture blanche 1L",12.5,10);
 
-    voirArticle();
+
 
     }
-    public static void ajoutArticle(String desigiation,Double prix ){
+    public static void ajoutArticle(String ref, String desigiation, Double prix, int fournisseur){
         ArticleService service = ArticleService.getSingle();
+        FournisseurService fournisseurService= FournisseurService.getSingle();
         try {
-            service.insertArticle(new Article(desigiation,prix));
+            int fournisseu = fournisseurService.findById(fournisseur);
+            Article article = new Article (ref,desigiation,prix,fournisseu);
+            service.insertArticle(article);
+
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
