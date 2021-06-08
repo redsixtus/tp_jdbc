@@ -20,7 +20,7 @@ public class FournisseurDaoJdbc implements FournisseurDao {
     private static final String INSERT_FOURNISSEUR_QUERY = "INSERT INTO FOURNISSEUR (NOM) VALUES (?)";
     private static final String UPDATE_FOURNISSEUR_QUERY = "UPDATE FOURNISSEUR SET NOM=?  WHERE NOM =?";
     private static final String DELETE_FOURNISSEUR_QUERY = "DELETE FROM FOURNISSEUR WHERE  NOM=? AND ID=?";
-    private static final String SELECT_FOURNISSEUR_QUERY = "SELECT ID, NOM FROM FOURNISSEUR WHERE ID=?";
+    private static final String SELECT_FOURNISSEUR_QUERY = "SELECT ID FROM FOURNISSEUR WHERE ID=?";
 
 
     @Override
@@ -89,19 +89,17 @@ public class FournisseurDaoJdbc implements FournisseurDao {
 
 
     @Override
-    public int findById(int fournisseu) throws SQLException {
+    public int findById (int id ) throws SQLException {
         Connection connection = ConnectionD.getSingle().getConnection();
         int nb;
         try (PreparedStatement pst = connection.prepareStatement(SELECT_FOURNISSEUR_QUERY)) {
-            pst.setInt(1, fournisseu);
+            pst.setInt(1, id );
              nb = pst.executeUpdate();
 
 
 
         }
-
-
-
         return nb;
+
     }
 }

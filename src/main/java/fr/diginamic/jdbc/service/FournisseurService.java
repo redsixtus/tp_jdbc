@@ -42,7 +42,7 @@ public class FournisseurService {
     public int findById(int id) throws  SQLException{
         FournisseurDao dao = new FournisseurDaoJdbc();
 
-        return dao.findById(10);
+        return dao.findById(id);
 
     }
 
