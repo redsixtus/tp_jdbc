@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="bvtxxo74w3z54lvq29mg@bvtxxo74w3z54lvq29mg-mysql.services.clever-cloud.com" uuid="b6a4108a-c2ae-432a-93b4-9a7946a8ff54">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://bvtxxo74w3z54lvq29mg-mysql.services.clever-cloud.com:3306/bvtxxo74w3z54lvq29mg</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
